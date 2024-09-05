@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Responsive Navigtion</title>
+
+    <!--CSS Links-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--icon-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-btn">
+            <i class='bx bx-moon' id="item" onclick="darkmodeFunction()"></i>
+            <button class="login">Login</button>
+            <button class="sign-up">Sign Up</button>
+
+            <div class="menu-item" id="menu-item">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+        </div>
+    </nav>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background-color: #DDDDDD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --main: #289951;
+    --second: #74C69D;
+    --hoverColor: #D8F3DC;
+    --third: #B7E4C7;
+    --dark-main: #03001C;
+
+
+}
+
+nav {
+    width: 100%;
+    background: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: blue; */
+}
+
+.logo {
+    color: #DDDDDD;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--third);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.nav-menu li a:hover {
+    color: var(--hoverColor);
+}
+
+
+i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: var(--third);
+    cursor: pointer;
+}
+
+i:hover {
+    color: var(--hoverColor);
+}
+
+
+button {
+    font-size: 17px;
+    padding: 7px;
+    width: 120px;
+    border-radius: 5px;
+    margin: 3px;
+    font-weight: 600;
+    border: 2px solid;
+}
+
+.login {
+    color: var(--third);
+    border-color: var(--third);
+    background-color: transparent;
+}
+
+.login:hover {
+    color: var(--hoverColor);
+    border-color: var(--hoverColor);
+}
+
+.sign-up {
+    color: var(--main);
+    background-color: var(--third);
+    border-color: var(--third);
+}
+
+.sign-up:hover {
+    color: var(--main);
+    background-color: var(--hoverColor);
+    border-color: var(--hoverColor);
+}
+
+
+.menu-item{
+    display: none;
+}
+
+
+
+/* dark-mode */
+
+.dark-mode {
+    background: var(--dark-main);
+}
+
+
+
+
+/* Meadia query */
+
+@media only screen and (max-width: 768px) {
+
+    .nav-menu{
+        position: absolute;
+        width: 100%;
+        background-color: var(--main);
+        margin-top: 345px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        opacity: 0;
+    }
+
+    .nav-menu li a {
+        margin-bottom: 10px;
+    }
+
+    .menu-item{
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        border: none;
+        display: grid;
+        place-items: center;
+        position: relative;
+        background-color: transparent;
+        /* background-color: yellow;   */
+    }
+
+    .dark-mode {
+        background: var(--dark-main);
+    }
+    .menu-item span{
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: var(--third);
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+
+    .show{
+        opacity: 1;
+    }
+
+    span.change:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      
+    span.change:nth-child(2) {
+        opacity: 0;
+      }
+      
+    span.change:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+      }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .login,
+    .sign-up{
+        display: none;
+    }
+    .nav-menu{
+        position: absolute;
+        width: 100%;
+        background-color: var(--main);
+        margin-top: 345px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        opacity: 0;
+    }
+
+    .nav-menu li a {
+        margin-bottom: 10px;
+    }
+
+    .menu-item{
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        border: none;
+        display: grid;
+        place-items: center;
+        position: relative;
+        background-color: transparent;
+        /* background-color: yellow;   */
+    }
+
+    .dark-mode {
+        background: var(--dark-main);
+    }
+    .menu-item span{
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: var(--third);
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+
+    .show{
+        opacity: 1;
+    }
+
+    span.change:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      
+    span.change:nth-child(2) {
+        opacity: 0;
+      }
+      
+    span.change:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+      }
+
+
+}
